@@ -13,8 +13,9 @@ import java.util.Map;
  * @email 996627951@qq.com
  * @date 2020-07-05 21:13:07
  */
-public interface CouponSpuCategoryRelationService extends IService<CouponSpuCategoryRelationEntity> {
+public interface CouponSpuCategoryRelationService extends
+  IService<CouponSpuCategoryRelationEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
+  PageUtils queryPage(Map<String, Object> params);
 }
 

@@ -14,16 +14,17 @@ import com.zbin.gulimall.product.service.SkuInfoService;
 
 
 @Service("skuInfoService")
-public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoDao, SkuInfoEntity> implements SkuInfoService {
+public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoDao, SkuInfoEntity> implements
+  SkuInfoService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<SkuInfoEntity> page = this.page(
-                new Query<SkuInfoEntity>().getPage(params),
-                new QueryWrapper<SkuInfoEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<SkuInfoEntity> page = this.page(
+      new Query<SkuInfoEntity>().getPage(params),
+      new QueryWrapper<SkuInfoEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

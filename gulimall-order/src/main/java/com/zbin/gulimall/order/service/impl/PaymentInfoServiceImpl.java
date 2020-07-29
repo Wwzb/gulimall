@@ -14,16 +14,17 @@ import com.zbin.gulimall.order.service.PaymentInfoService;
 
 
 @Service("paymentInfoService")
-public class PaymentInfoServiceImpl extends ServiceImpl<PaymentInfoDao, PaymentInfoEntity> implements PaymentInfoService {
+public class PaymentInfoServiceImpl extends
+  ServiceImpl<PaymentInfoDao, PaymentInfoEntity> implements PaymentInfoService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<PaymentInfoEntity> page = this.page(
-                new Query<PaymentInfoEntity>().getPage(params),
-                new QueryWrapper<PaymentInfoEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<PaymentInfoEntity> page = this.page(
+      new Query<PaymentInfoEntity>().getPage(params),
+      new QueryWrapper<PaymentInfoEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

@@ -15,6 +15,6 @@ import java.util.Map;
  */
 public interface SeckillSessionService extends IService<SeckillSessionEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
+  PageUtils queryPage(Map<String, Object> params);
 }
 

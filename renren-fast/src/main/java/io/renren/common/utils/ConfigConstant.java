@@ -14,8 +14,9 @@ package io.renren.common.utils;
  * @author Mark sunlightcs@gmail.com
  */
 public class ConfigConstant {
-    /**
-     * 云存储配置KEY
-     */
-    public final static String CLOUD_STORAGE_CONFIG_KEY = "CLOUD_STORAGE_CONFIG_KEY";
+
+  /**
+   * 云存储配置KEY
+   */
+  public final static String CLOUD_STORAGE_CONFIG_KEY = "CLOUD_STORAGE_CONFIG_KEY";
 }

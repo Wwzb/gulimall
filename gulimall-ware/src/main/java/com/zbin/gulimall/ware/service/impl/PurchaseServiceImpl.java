@@ -14,16 +14,17 @@ import com.zbin.gulimall.ware.service.PurchaseService;
 
 
 @Service("purchaseService")
-public class PurchaseServiceImpl extends ServiceImpl<PurchaseDao, PurchaseEntity> implements PurchaseService {
+public class PurchaseServiceImpl extends ServiceImpl<PurchaseDao, PurchaseEntity> implements
+  PurchaseService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<PurchaseEntity> page = this.page(
-                new Query<PurchaseEntity>().getPage(params),
-                new QueryWrapper<PurchaseEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<PurchaseEntity> page = this.page(
+      new Query<PurchaseEntity>().getPage(params),
+      new QueryWrapper<PurchaseEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

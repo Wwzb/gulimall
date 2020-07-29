@@ -14,16 +14,17 @@ import com.zbin.gulimall.coupon.service.SeckillPromotionService;
 
 
 @Service("seckillPromotionService")
-public class SeckillPromotionServiceImpl extends ServiceImpl<SeckillPromotionDao, SeckillPromotionEntity> implements SeckillPromotionService {
+public class SeckillPromotionServiceImpl extends
+  ServiceImpl<SeckillPromotionDao, SeckillPromotionEntity> implements SeckillPromotionService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<SeckillPromotionEntity> page = this.page(
-                new Query<SeckillPromotionEntity>().getPage(params),
-                new QueryWrapper<SeckillPromotionEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<SeckillPromotionEntity> page = this.page(
+      new Query<SeckillPromotionEntity>().getPage(params),
+      new QueryWrapper<SeckillPromotionEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

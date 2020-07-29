@@ -15,6 +15,6 @@ import java.util.Map;
  */
 public interface SeckillSkuNoticeService extends IService<SeckillSkuNoticeEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
+  PageUtils queryPage(Map<String, Object> params);
 }
 

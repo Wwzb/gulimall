@@ -24,5 +24,5 @@ import java.lang.annotation.Target;
 @Documented
 public @interface SysLog {
 
-	String value() default "";
+  String value() default "";
 }

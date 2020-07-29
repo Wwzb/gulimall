@@ -9,7 +9,7 @@ import lombok.Data;
 
 /**
  * 优惠券分类关联
- * 
+ *
  * @author Zbin
  * @email 996627951@qq.com
  * @date 2020-07-05 21:13:07
@@ -17,24 +17,25 @@ import lombok.Data;
 @Data
 @TableName("sms_coupon_spu_category_relation")
 public class CouponSpuCategoryRelationEntity implements Serializable {
-	private static final long serialVersionUID = 1L;
 
-	/**
-	 * id
-	 */
-	@TableId
-	private Long id;
-	/**
-	 * 优惠券id
-	 */
-	private Long couponId;
-	/**
-	 * 产品分类id
-	 */
-	private Long categoryId;
-	/**
-	 * 产品分类名称
-	 */
-	private String categoryName;
+  private static final long serialVersionUID = 1L;
+
+  /**
+   * id
+   */
+  @TableId
+  private Long id;
+  /**
+   * 优惠券id
+   */
+  private Long couponId;
+  /**
+   * 产品分类id
+   */
+  private Long categoryId;
+  /**
+   * 产品分类名称
+   */
+  private String categoryName;
 
 }

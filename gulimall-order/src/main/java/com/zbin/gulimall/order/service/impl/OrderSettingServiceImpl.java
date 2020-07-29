@@ -14,16 +14,17 @@ import com.zbin.gulimall.order.service.OrderSettingService;
 
 
 @Service("orderSettingService")
-public class OrderSettingServiceImpl extends ServiceImpl<OrderSettingDao, OrderSettingEntity> implements OrderSettingService {
+public class OrderSettingServiceImpl extends
+  ServiceImpl<OrderSettingDao, OrderSettingEntity> implements OrderSettingService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<OrderSettingEntity> page = this.page(
-                new Query<OrderSettingEntity>().getPage(params),
-                new QueryWrapper<OrderSettingEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<OrderSettingEntity> page = this.page(
+      new Query<OrderSettingEntity>().getPage(params),
+      new QueryWrapper<OrderSettingEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

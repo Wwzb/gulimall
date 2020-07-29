@@ -14,16 +14,17 @@ import com.zbin.gulimall.member.service.MemberLevelService;
 
 
 @Service("memberLevelService")
-public class MemberLevelServiceImpl extends ServiceImpl<MemberLevelDao, MemberLevelEntity> implements MemberLevelService {
+public class MemberLevelServiceImpl extends
+  ServiceImpl<MemberLevelDao, MemberLevelEntity> implements MemberLevelService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<MemberLevelEntity> page = this.page(
-                new Query<MemberLevelEntity>().getPage(params),
-                new QueryWrapper<MemberLevelEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<MemberLevelEntity> page = this.page(
+      new Query<MemberLevelEntity>().getPage(params),
+      new QueryWrapper<MemberLevelEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

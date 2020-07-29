@@ -6,12 +6,12 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 会员
- * 
+ *
  * @author Zbin
  * @email 996627951@qq.com
  * @date 2020-07-05 21:20:05
  */
 @Mapper
 public interface MemberDao extends BaseMapper<MemberEntity> {
-	
+
 }

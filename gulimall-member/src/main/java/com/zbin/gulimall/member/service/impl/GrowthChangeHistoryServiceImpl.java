@@ -14,16 +14,18 @@ import com.zbin.gulimall.member.service.GrowthChangeHistoryService;
 
 
 @Service("growthChangeHistoryService")
-public class GrowthChangeHistoryServiceImpl extends ServiceImpl<GrowthChangeHistoryDao, GrowthChangeHistoryEntity> implements GrowthChangeHistoryService {
+public class GrowthChangeHistoryServiceImpl extends
+  ServiceImpl<GrowthChangeHistoryDao, GrowthChangeHistoryEntity> implements
+  GrowthChangeHistoryService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<GrowthChangeHistoryEntity> page = this.page(
-                new Query<GrowthChangeHistoryEntity>().getPage(params),
-                new QueryWrapper<GrowthChangeHistoryEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<GrowthChangeHistoryEntity> page = this.page(
+      new Query<GrowthChangeHistoryEntity>().getPage(params),
+      new QueryWrapper<GrowthChangeHistoryEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

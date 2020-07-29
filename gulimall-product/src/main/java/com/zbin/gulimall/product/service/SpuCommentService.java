@@ -15,6 +15,6 @@ import java.util.Map;
  */
 public interface SpuCommentService extends IService<SpuCommentEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
+  PageUtils queryPage(Map<String, Object> params);
 }
 

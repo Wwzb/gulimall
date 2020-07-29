@@ -15,188 +15,189 @@ package io.renren.datasource.properties;
  * @since 1.0.0
  */
 public class DataSourceProperties {
-    private String driverClassName;
-    private String url;
-    private String username;
-    private String password;
 
-    /**
-     * Druid默认参数
-     */
-    private int initialSize = 2;
-    private int maxActive = 10;
-    private int minIdle = -1;
-    private long maxWait = 60 * 1000L;
-    private long timeBetweenEvictionRunsMillis = 60 * 1000L;
-    private long minEvictableIdleTimeMillis = 1000L * 60L * 30L;
-    private long maxEvictableIdleTimeMillis = 1000L * 60L * 60L * 7;
-    private String validationQuery = "select 1";
-    private int validationQueryTimeout = -1;
-    private boolean testOnBorrow = false;
-    private boolean testOnReturn = false;
-    private boolean testWhileIdle = true;
-    private boolean poolPreparedStatements = false;
-    private int maxOpenPreparedStatements = -1;
-    private boolean sharePreparedStatements = false;
-    private String filters = "stat,wall";
+  private String driverClassName;
+  private String url;
+  private String username;
+  private String password;
 
-    public String getDriverClassName() {
-        return driverClassName;
-    }
+  /**
+   * Druid默认参数
+   */
+  private int initialSize = 2;
+  private int maxActive = 10;
+  private int minIdle = -1;
+  private long maxWait = 60 * 1000L;
+  private long timeBetweenEvictionRunsMillis = 60 * 1000L;
+  private long minEvictableIdleTimeMillis = 1000L * 60L * 30L;
+  private long maxEvictableIdleTimeMillis = 1000L * 60L * 60L * 7;
+  private String validationQuery = "select 1";
+  private int validationQueryTimeout = -1;
+  private boolean testOnBorrow = false;
+  private boolean testOnReturn = false;
+  private boolean testWhileIdle = true;
+  private boolean poolPreparedStatements = false;
+  private int maxOpenPreparedStatements = -1;
+  private boolean sharePreparedStatements = false;
+  private String filters = "stat,wall";
 
-    public void setDriverClassName(String driverClassName) {
-        this.driverClassName = driverClassName;
-    }
+  public String getDriverClassName() {
+    return driverClassName;
+  }
 
-    public String getUrl() {
-        return url;
-    }
+  public void setDriverClassName(String driverClassName) {
+    this.driverClassName = driverClassName;
+  }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
+  public String getUrl() {
+    return url;
+  }
 
-    public String getUsername() {
-        return username;
-    }
+  public void setUrl(String url) {
+    this.url = url;
+  }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+  public String getUsername() {
+    return username;
+  }
 
-    public String getPassword() {
-        return password;
-    }
+  public void setUsername(String username) {
+    this.username = username;
+  }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+  public String getPassword() {
+    return password;
+  }
 
-    public int getInitialSize() {
-        return initialSize;
-    }
+  public void setPassword(String password) {
+    this.password = password;
+  }
 
-    public void setInitialSize(int initialSize) {
-        this.initialSize = initialSize;
-    }
+  public int getInitialSize() {
+    return initialSize;
+  }
 
-    public int getMaxActive() {
-        return maxActive;
-    }
+  public void setInitialSize(int initialSize) {
+    this.initialSize = initialSize;
+  }
 
-    public void setMaxActive(int maxActive) {
-        this.maxActive = maxActive;
-    }
+  public int getMaxActive() {
+    return maxActive;
+  }
 
-    public int getMinIdle() {
-        return minIdle;
-    }
+  public void setMaxActive(int maxActive) {
+    this.maxActive = maxActive;
+  }
 
-    public void setMinIdle(int minIdle) {
-        this.minIdle = minIdle;
-    }
+  public int getMinIdle() {
+    return minIdle;
+  }
 
-    public long getMaxWait() {
-        return maxWait;
-    }
+  public void setMinIdle(int minIdle) {
+    this.minIdle = minIdle;
+  }
 
-    public void setMaxWait(long maxWait) {
-        this.maxWait = maxWait;
-    }
+  public long getMaxWait() {
+    return maxWait;
+  }
 
-    public long getTimeBetweenEvictionRunsMillis() {
-        return timeBetweenEvictionRunsMillis;
-    }
+  public void setMaxWait(long maxWait) {
+    this.maxWait = maxWait;
+  }
 
-    public void setTimeBetweenEvictionRunsMillis(long timeBetweenEvictionRunsMillis) {
-        this.timeBetweenEvictionRunsMillis = timeBetweenEvictionRunsMillis;
-    }
+  public long getTimeBetweenEvictionRunsMillis() {
+    return timeBetweenEvictionRunsMillis;
+  }
 
-    public long getMinEvictableIdleTimeMillis() {
-        return minEvictableIdleTimeMillis;
-    }
+  public void setTimeBetweenEvictionRunsMillis(long timeBetweenEvictionRunsMillis) {
+    this.timeBetweenEvictionRunsMillis = timeBetweenEvictionRunsMillis;
+  }
 
-    public void setMinEvictableIdleTimeMillis(long minEvictableIdleTimeMillis) {
-        this.minEvictableIdleTimeMillis = minEvictableIdleTimeMillis;
-    }
+  public long getMinEvictableIdleTimeMillis() {
+    return minEvictableIdleTimeMillis;
+  }
 
-    public long getMaxEvictableIdleTimeMillis() {
-        return maxEvictableIdleTimeMillis;
-    }
+  public void setMinEvictableIdleTimeMillis(long minEvictableIdleTimeMillis) {
+    this.minEvictableIdleTimeMillis = minEvictableIdleTimeMillis;
+  }
 
-    public void setMaxEvictableIdleTimeMillis(long maxEvictableIdleTimeMillis) {
-        this.maxEvictableIdleTimeMillis = maxEvictableIdleTimeMillis;
-    }
+  public long getMaxEvictableIdleTimeMillis() {
+    return maxEvictableIdleTimeMillis;
+  }
 
-    public String getValidationQuery() {
-        return validationQuery;
-    }
+  public void setMaxEvictableIdleTimeMillis(long maxEvictableIdleTimeMillis) {
+    this.maxEvictableIdleTimeMillis = maxEvictableIdleTimeMillis;
+  }
 
-    public void setValidationQuery(String validationQuery) {
-        this.validationQuery = validationQuery;
-    }
+  public String getValidationQuery() {
+    return validationQuery;
+  }
 
-    public int getValidationQueryTimeout() {
-        return validationQueryTimeout;
-    }
+  public void setValidationQuery(String validationQuery) {
+    this.validationQuery = validationQuery;
+  }
 
-    public void setValidationQueryTimeout(int validationQueryTimeout) {
-        this.validationQueryTimeout = validationQueryTimeout;
-    }
+  public int getValidationQueryTimeout() {
+    return validationQueryTimeout;
+  }
 
-    public boolean isTestOnBorrow() {
-        return testOnBorrow;
-    }
+  public void setValidationQueryTimeout(int validationQueryTimeout) {
+    this.validationQueryTimeout = validationQueryTimeout;
+  }
 
-    public void setTestOnBorrow(boolean testOnBorrow) {
-        this.testOnBorrow = testOnBorrow;
-    }
+  public boolean isTestOnBorrow() {
+    return testOnBorrow;
+  }
 
-    public boolean isTestOnReturn() {
-        return testOnReturn;
-    }
+  public void setTestOnBorrow(boolean testOnBorrow) {
+    this.testOnBorrow = testOnBorrow;
+  }
 
-    public void setTestOnReturn(boolean testOnReturn) {
-        this.testOnReturn = testOnReturn;
-    }
+  public boolean isTestOnReturn() {
+    return testOnReturn;
+  }
 
-    public boolean isTestWhileIdle() {
-        return testWhileIdle;
-    }
+  public void setTestOnReturn(boolean testOnReturn) {
+    this.testOnReturn = testOnReturn;
+  }
 
-    public void setTestWhileIdle(boolean testWhileIdle) {
-        this.testWhileIdle = testWhileIdle;
-    }
+  public boolean isTestWhileIdle() {
+    return testWhileIdle;
+  }
 
-    public boolean isPoolPreparedStatements() {
-        return poolPreparedStatements;
-    }
+  public void setTestWhileIdle(boolean testWhileIdle) {
+    this.testWhileIdle = testWhileIdle;
+  }
 
-    public void setPoolPreparedStatements(boolean poolPreparedStatements) {
-        this.poolPreparedStatements = poolPreparedStatements;
-    }
+  public boolean isPoolPreparedStatements() {
+    return poolPreparedStatements;
+  }
 
-    public int getMaxOpenPreparedStatements() {
-        return maxOpenPreparedStatements;
-    }
+  public void setPoolPreparedStatements(boolean poolPreparedStatements) {
+    this.poolPreparedStatements = poolPreparedStatements;
+  }
 
-    public void setMaxOpenPreparedStatements(int maxOpenPreparedStatements) {
-        this.maxOpenPreparedStatements = maxOpenPreparedStatements;
-    }
+  public int getMaxOpenPreparedStatements() {
+    return maxOpenPreparedStatements;
+  }
 
-    public boolean isSharePreparedStatements() {
-        return sharePreparedStatements;
-    }
+  public void setMaxOpenPreparedStatements(int maxOpenPreparedStatements) {
+    this.maxOpenPreparedStatements = maxOpenPreparedStatements;
+  }
 
-    public void setSharePreparedStatements(boolean sharePreparedStatements) {
-        this.sharePreparedStatements = sharePreparedStatements;
-    }
+  public boolean isSharePreparedStatements() {
+    return sharePreparedStatements;
+  }
 
-    public String getFilters() {
-        return filters;
-    }
+  public void setSharePreparedStatements(boolean sharePreparedStatements) {
+    this.sharePreparedStatements = sharePreparedStatements;
+  }
 
-    public void setFilters(String filters) {
-        this.filters = filters;
-    }
+  public String getFilters() {
+    return filters;
+  }
+
+  public void setFilters(String filters) {
+    this.filters = filters;
+  }
 }

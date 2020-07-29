@@ -14,16 +14,18 @@ import com.zbin.gulimall.member.service.MemberReceiveAddressService;
 
 
 @Service("memberReceiveAddressService")
-public class MemberReceiveAddressServiceImpl extends ServiceImpl<MemberReceiveAddressDao, MemberReceiveAddressEntity> implements MemberReceiveAddressService {
+public class MemberReceiveAddressServiceImpl extends
+  ServiceImpl<MemberReceiveAddressDao, MemberReceiveAddressEntity> implements
+  MemberReceiveAddressService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<MemberReceiveAddressEntity> page = this.page(
-                new Query<MemberReceiveAddressEntity>().getPage(params),
-                new QueryWrapper<MemberReceiveAddressEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<MemberReceiveAddressEntity> page = this.page(
+      new Query<MemberReceiveAddressEntity>().getPage(params),
+      new QueryWrapper<MemberReceiveAddressEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

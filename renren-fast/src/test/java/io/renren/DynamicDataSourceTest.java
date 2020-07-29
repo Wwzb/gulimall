@@ -23,16 +23,17 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class DynamicDataSourceTest {
-    @Autowired
-    private DynamicDataSourceTestService dynamicDataSourceTestService;
 
-    @Test
-    public void test(){
-        Long id = 1L;
+  @Autowired
+  private DynamicDataSourceTestService dynamicDataSourceTestService;
 
-        dynamicDataSourceTestService.updateUser(id);
-        dynamicDataSourceTestService.updateUserBySlave1(id);
-        dynamicDataSourceTestService.updateUserBySlave2(id);
-    }
+  @Test
+  public void test() {
+    Long id = 1L;
+
+    dynamicDataSourceTestService.updateUser(id);
+    dynamicDataSourceTestService.updateUserBySlave1(id);
+    dynamicDataSourceTestService.updateUserBySlave2(id);
+  }
 
 }

@@ -15,6 +15,6 @@ import java.util.Map;
  */
 public interface HomeAdvService extends IService<HomeAdvEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
+  PageUtils queryPage(Map<String, Object> params);
 }
 

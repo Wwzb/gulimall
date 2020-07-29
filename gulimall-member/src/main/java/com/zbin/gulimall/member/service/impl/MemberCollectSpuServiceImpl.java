@@ -14,16 +14,17 @@ import com.zbin.gulimall.member.service.MemberCollectSpuService;
 
 
 @Service("memberCollectSpuService")
-public class MemberCollectSpuServiceImpl extends ServiceImpl<MemberCollectSpuDao, MemberCollectSpuEntity> implements MemberCollectSpuService {
+public class MemberCollectSpuServiceImpl extends
+  ServiceImpl<MemberCollectSpuDao, MemberCollectSpuEntity> implements MemberCollectSpuService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<MemberCollectSpuEntity> page = this.page(
-                new Query<MemberCollectSpuEntity>().getPage(params),
-                new QueryWrapper<MemberCollectSpuEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<MemberCollectSpuEntity> page = this.page(
+      new Query<MemberCollectSpuEntity>().getPage(params),
+      new QueryWrapper<MemberCollectSpuEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

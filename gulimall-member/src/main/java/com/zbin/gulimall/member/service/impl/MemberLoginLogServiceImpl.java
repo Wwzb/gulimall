@@ -14,16 +14,17 @@ import com.zbin.gulimall.member.service.MemberLoginLogService;
 
 
 @Service("memberLoginLogService")
-public class MemberLoginLogServiceImpl extends ServiceImpl<MemberLoginLogDao, MemberLoginLogEntity> implements MemberLoginLogService {
+public class MemberLoginLogServiceImpl extends
+  ServiceImpl<MemberLoginLogDao, MemberLoginLogEntity> implements MemberLoginLogService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<MemberLoginLogEntity> page = this.page(
-                new Query<MemberLoginLogEntity>().getPage(params),
-                new QueryWrapper<MemberLoginLogEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<MemberLoginLogEntity> page = this.page(
+      new Query<MemberLoginLogEntity>().getPage(params),
+      new QueryWrapper<MemberLoginLogEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

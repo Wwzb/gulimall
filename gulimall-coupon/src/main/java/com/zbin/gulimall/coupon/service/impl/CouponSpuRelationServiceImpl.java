@@ -14,16 +14,17 @@ import com.zbin.gulimall.coupon.service.CouponSpuRelationService;
 
 
 @Service("couponSpuRelationService")
-public class CouponSpuRelationServiceImpl extends ServiceImpl<CouponSpuRelationDao, CouponSpuRelationEntity> implements CouponSpuRelationService {
+public class CouponSpuRelationServiceImpl extends
+  ServiceImpl<CouponSpuRelationDao, CouponSpuRelationEntity> implements CouponSpuRelationService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<CouponSpuRelationEntity> page = this.page(
-                new Query<CouponSpuRelationEntity>().getPage(params),
-                new QueryWrapper<CouponSpuRelationEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<CouponSpuRelationEntity> page = this.page(
+      new Query<CouponSpuRelationEntity>().getPage(params),
+      new QueryWrapper<CouponSpuRelationEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

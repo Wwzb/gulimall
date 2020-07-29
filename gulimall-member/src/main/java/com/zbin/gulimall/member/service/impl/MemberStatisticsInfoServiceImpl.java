@@ -14,16 +14,18 @@ import com.zbin.gulimall.member.service.MemberStatisticsInfoService;
 
 
 @Service("memberStatisticsInfoService")
-public class MemberStatisticsInfoServiceImpl extends ServiceImpl<MemberStatisticsInfoDao, MemberStatisticsInfoEntity> implements MemberStatisticsInfoService {
+public class MemberStatisticsInfoServiceImpl extends
+  ServiceImpl<MemberStatisticsInfoDao, MemberStatisticsInfoEntity> implements
+  MemberStatisticsInfoService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<MemberStatisticsInfoEntity> page = this.page(
-                new Query<MemberStatisticsInfoEntity>().getPage(params),
-                new QueryWrapper<MemberStatisticsInfoEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<MemberStatisticsInfoEntity> page = this.page(
+      new Query<MemberStatisticsInfoEntity>().getPage(params),
+      new QueryWrapper<MemberStatisticsInfoEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

@@ -16,14 +16,14 @@ import com.zbin.gulimall.product.service.BrandService;
 @Service("brandService")
 public class BrandServiceImpl extends ServiceImpl<BrandDao, BrandEntity> implements BrandService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<BrandEntity> page = this.page(
-                new Query<BrandEntity>().getPage(params),
-                new QueryWrapper<BrandEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<BrandEntity> page = this.page(
+      new Query<BrandEntity>().getPage(params),
+      new QueryWrapper<BrandEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

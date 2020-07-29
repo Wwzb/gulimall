@@ -14,16 +14,17 @@ import com.zbin.gulimall.coupon.service.HomeSubjectService;
 
 
 @Service("homeSubjectService")
-public class HomeSubjectServiceImpl extends ServiceImpl<HomeSubjectDao, HomeSubjectEntity> implements HomeSubjectService {
+public class HomeSubjectServiceImpl extends
+  ServiceImpl<HomeSubjectDao, HomeSubjectEntity> implements HomeSubjectService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<HomeSubjectEntity> page = this.page(
-                new Query<HomeSubjectEntity>().getPage(params),
-                new QueryWrapper<HomeSubjectEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<HomeSubjectEntity> page = this.page(
+      new Query<HomeSubjectEntity>().getPage(params),
+      new QueryWrapper<HomeSubjectEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

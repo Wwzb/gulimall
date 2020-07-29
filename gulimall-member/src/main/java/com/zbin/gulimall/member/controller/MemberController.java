@@ -18,7 +18,6 @@ import com.zbin.common.utils.PageUtils;
 import com.zbin.common.utils.R;
 
 
-
 /**
  * 会员
  *
@@ -31,72 +30,72 @@ import com.zbin.common.utils.R;
 @RequiredArgsConstructor
 public class MemberController {
 
-    private final MemberService memberService;
-    private final CouponFeignService couponFeignService;
+  private final MemberService memberService;
+  private final CouponFeignService couponFeignService;
 
-    @RequestMapping("/coupons")
-    public R test(){
-        MemberEntity entity = new MemberEntity();
-        entity.setNickname("张三");
+  @RequestMapping("/coupons")
+  public R test() {
+    MemberEntity entity = new MemberEntity();
+    entity.setNickname("张三");
 
-        R membercoupons = couponFeignService.membercoupons();
-        return R.ok().put("member",entity).put("coupons",membercoupons.get("coupons"));
-    }
+    R membercoupons = couponFeignService.membercoupons();
+    return R.ok().put("member", entity).put("coupons", membercoupons.get("coupons"));
+  }
 
-    /**
-     * 列表
-     */
-    @RequestMapping("/list")
-    //@RequiresPermissions("member:member:list")
-    public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = memberService.queryPage(params);
+  /**
+   * 列表
+   */
+  @RequestMapping("/list")
+  //@RequiresPermissions("member:member:list")
+  public R list(@RequestParam Map<String, Object> params) {
+    PageUtils page = memberService.queryPage(params);
 
-        return R.ok().put("page", page);
-    }
+    return R.ok().put("page", page);
+  }
 
 
-    /**
-     * 信息
-     */
-    @RequestMapping("/info/{id}")
-    //@RequiresPermissions("member:member:info")
-    public R info(@PathVariable("id") Long id){
-		MemberEntity member = memberService.getById(id);
+  /**
+   * 信息
+   */
+  @RequestMapping("/info/{id}")
+  //@RequiresPermissions("member:member:info")
+  public R info(@PathVariable("id") Long id) {
+    MemberEntity member = memberService.getById(id);
 
-        return R.ok().put("member", member);
-    }
+    return R.ok().put("member", member);
+  }
 
-    /**
-     * 保存
-     */
-    @RequestMapping("/save")
-    //@RequiresPermissions("member:member:save")
-    public R save(@RequestBody MemberEntity member){
-		memberService.save(member);
+  /**
+   * 保存
+   */
+  @RequestMapping("/save")
+  //@RequiresPermissions("member:member:save")
+  public R save(@RequestBody MemberEntity member) {
+    memberService.save(member);
 
-        return R.ok();
-    }
+    return R.ok();
+  }
 
-    /**
-     * 修改
-     */
-    @RequestMapping("/update")
-    //@RequiresPermissions("member:member:update")
-    public R update(@RequestBody MemberEntity member){
-		memberService.updateById(member);
+  /**
+   * 修改
+   */
+  @RequestMapping("/update")
+  //@RequiresPermissions("member:member:update")
+  public R update(@RequestBody MemberEntity member) {
+    memberService.updateById(member);
 
-        return R.ok();
-    }
+    return R.ok();
+  }
 
-    /**
-     * 删除
-     */
-    @RequestMapping("/delete")
-    //@RequiresPermissions("member:member:delete")
-    public R delete(@RequestBody Long[] ids){
-		memberService.removeByIds(Arrays.asList(ids));
+  /**
+   * 删除
+   */
+  @RequestMapping("/delete")
+  //@RequiresPermissions("member:member:delete")
+  public R delete(@RequestBody Long[] ids) {
+    memberService.removeByIds(Arrays.asList(ids));
 
-        return R.ok();
-    }
+    return R.ok();
+  }
 
 }

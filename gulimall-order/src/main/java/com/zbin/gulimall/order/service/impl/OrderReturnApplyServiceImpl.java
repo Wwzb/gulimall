@@ -14,16 +14,17 @@ import com.zbin.gulimall.order.service.OrderReturnApplyService;
 
 
 @Service("orderReturnApplyService")
-public class OrderReturnApplyServiceImpl extends ServiceImpl<OrderReturnApplyDao, OrderReturnApplyEntity> implements OrderReturnApplyService {
+public class OrderReturnApplyServiceImpl extends
+  ServiceImpl<OrderReturnApplyDao, OrderReturnApplyEntity> implements OrderReturnApplyService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<OrderReturnApplyEntity> page = this.page(
-                new Query<OrderReturnApplyEntity>().getPage(params),
-                new QueryWrapper<OrderReturnApplyEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<OrderReturnApplyEntity> page = this.page(
+      new Query<OrderReturnApplyEntity>().getPage(params),
+      new QueryWrapper<OrderReturnApplyEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

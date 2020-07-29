@@ -15,6 +15,6 @@ import java.util.Map;
  */
 public interface IntegrationChangeHistoryService extends IService<IntegrationChangeHistoryEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
+  PageUtils queryPage(Map<String, Object> params);
 }
 

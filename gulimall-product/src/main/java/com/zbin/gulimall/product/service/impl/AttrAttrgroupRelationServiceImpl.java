@@ -14,16 +14,18 @@ import com.zbin.gulimall.product.service.AttrAttrgroupRelationService;
 
 
 @Service("attrAttrgroupRelationService")
-public class AttrAttrgroupRelationServiceImpl extends ServiceImpl<AttrAttrgroupRelationDao, AttrAttrgroupRelationEntity> implements AttrAttrgroupRelationService {
+public class AttrAttrgroupRelationServiceImpl extends
+  ServiceImpl<AttrAttrgroupRelationDao, AttrAttrgroupRelationEntity> implements
+  AttrAttrgroupRelationService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<AttrAttrgroupRelationEntity> page = this.page(
-                new Query<AttrAttrgroupRelationEntity>().getPage(params),
-                new QueryWrapper<AttrAttrgroupRelationEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<AttrAttrgroupRelationEntity> page = this.page(
+      new Query<AttrAttrgroupRelationEntity>().getPage(params),
+      new QueryWrapper<AttrAttrgroupRelationEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

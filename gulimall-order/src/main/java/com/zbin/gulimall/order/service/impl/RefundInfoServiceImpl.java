@@ -14,16 +14,17 @@ import com.zbin.gulimall.order.service.RefundInfoService;
 
 
 @Service("refundInfoService")
-public class RefundInfoServiceImpl extends ServiceImpl<RefundInfoDao, RefundInfoEntity> implements RefundInfoService {
+public class RefundInfoServiceImpl extends ServiceImpl<RefundInfoDao, RefundInfoEntity> implements
+  RefundInfoService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<RefundInfoEntity> page = this.page(
-                new Query<RefundInfoEntity>().getPage(params),
-                new QueryWrapper<RefundInfoEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<RefundInfoEntity> page = this.page(
+      new Query<RefundInfoEntity>().getPage(params),
+      new QueryWrapper<RefundInfoEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan("com.zbin.gulimall.product.dao")
 public class GulimallProductApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(GulimallProductApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(GulimallProductApplication.class, args);
+  }
 
 }

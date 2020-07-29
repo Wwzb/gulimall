@@ -14,16 +14,17 @@ import com.zbin.gulimall.coupon.service.MemberPriceService;
 
 
 @Service("memberPriceService")
-public class MemberPriceServiceImpl extends ServiceImpl<MemberPriceDao, MemberPriceEntity> implements MemberPriceService {
+public class MemberPriceServiceImpl extends
+  ServiceImpl<MemberPriceDao, MemberPriceEntity> implements MemberPriceService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<MemberPriceEntity> page = this.page(
-                new Query<MemberPriceEntity>().getPage(params),
-                new QueryWrapper<MemberPriceEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<MemberPriceEntity> page = this.page(
+      new Query<MemberPriceEntity>().getPage(params),
+      new QueryWrapper<MemberPriceEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

@@ -14,16 +14,17 @@ import com.zbin.gulimall.coupon.service.CouponHistoryService;
 
 
 @Service("couponHistoryService")
-public class CouponHistoryServiceImpl extends ServiceImpl<CouponHistoryDao, CouponHistoryEntity> implements CouponHistoryService {
+public class CouponHistoryServiceImpl extends
+  ServiceImpl<CouponHistoryDao, CouponHistoryEntity> implements CouponHistoryService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<CouponHistoryEntity> page = this.page(
-                new Query<CouponHistoryEntity>().getPage(params),
-                new QueryWrapper<CouponHistoryEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<CouponHistoryEntity> page = this.page(
+      new Query<CouponHistoryEntity>().getPage(params),
+      new QueryWrapper<CouponHistoryEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

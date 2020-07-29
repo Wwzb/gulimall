@@ -14,16 +14,18 @@ import com.zbin.gulimall.coupon.service.SeckillSkuRelationService;
 
 
 @Service("seckillSkuRelationService")
-public class SeckillSkuRelationServiceImpl extends ServiceImpl<SeckillSkuRelationDao, SeckillSkuRelationEntity> implements SeckillSkuRelationService {
+public class SeckillSkuRelationServiceImpl extends
+  ServiceImpl<SeckillSkuRelationDao, SeckillSkuRelationEntity> implements
+  SeckillSkuRelationService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<SeckillSkuRelationEntity> page = this.page(
-                new Query<SeckillSkuRelationEntity>().getPage(params),
-                new QueryWrapper<SeckillSkuRelationEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<SeckillSkuRelationEntity> page = this.page(
+      new Query<SeckillSkuRelationEntity>().getPage(params),
+      new QueryWrapper<SeckillSkuRelationEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

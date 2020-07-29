@@ -15,6 +15,6 @@ import java.util.Map;
  */
 public interface SkuFullReductionService extends IService<SkuFullReductionEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
+  PageUtils queryPage(Map<String, Object> params);
 }
 

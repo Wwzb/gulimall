@@ -15,6 +15,6 @@ import java.util.Map;
  */
 public interface CouponSpuRelationService extends IService<CouponSpuRelationEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
+  PageUtils queryPage(Map<String, Object> params);
 }
 

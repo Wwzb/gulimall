@@ -15,6 +15,6 @@ import java.util.Map;
  */
 public interface MemberCollectSubjectService extends IService<MemberCollectSubjectEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
+  PageUtils queryPage(Map<String, Object> params);
 }
 

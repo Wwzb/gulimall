@@ -9,7 +9,7 @@ import lombok.Data;
 
 /**
  * 属性分组
- * 
+ *
  * @author zbin
  * @email 996627951@qq.com
  * @date 2020-07-02 20:44:39
@@ -17,32 +17,33 @@ import lombok.Data;
 @Data
 @TableName("pms_attr_group")
 public class AttrGroupEntity implements Serializable {
-	private static final long serialVersionUID = 1L;
 
-	/**
-	 * 分组id
-	 */
-	@TableId
-	private Long attrGroupId;
-	/**
-	 * 组名
-	 */
-	private String attrGroupName;
-	/**
-	 * 排序
-	 */
-	private Integer sort;
-	/**
-	 * 描述
-	 */
-	private String descript;
-	/**
-	 * 组图标
-	 */
-	private String icon;
-	/**
-	 * 所属分类id
-	 */
-	private Long catelogId;
+  private static final long serialVersionUID = 1L;
+
+  /**
+   * 分组id
+   */
+  @TableId
+  private Long attrGroupId;
+  /**
+   * 组名
+   */
+  private String attrGroupName;
+  /**
+   * 排序
+   */
+  private Integer sort;
+  /**
+   * 描述
+   */
+  private String descript;
+  /**
+   * 组图标
+   */
+  private String icon;
+  /**
+   * 所属分类id
+   */
+  private Long catelogId;
 
 }

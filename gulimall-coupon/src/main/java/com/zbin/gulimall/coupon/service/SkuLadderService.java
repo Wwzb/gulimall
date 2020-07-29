@@ -15,6 +15,6 @@ import java.util.Map;
  */
 public interface SkuLadderService extends IService<SkuLadderEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
+  PageUtils queryPage(Map<String, Object> params);
 }
 

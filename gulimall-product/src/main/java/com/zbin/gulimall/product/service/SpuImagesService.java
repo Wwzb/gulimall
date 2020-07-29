@@ -15,6 +15,6 @@ import java.util.Map;
  */
 public interface SpuImagesService extends IService<SpuImagesEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
+  PageUtils queryPage(Map<String, Object> params);
 }
 

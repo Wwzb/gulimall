@@ -16,14 +16,14 @@ import com.zbin.gulimall.product.service.AttrService;
 @Service("attrService")
 public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements AttrService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<AttrEntity> page = this.page(
-                new Query<AttrEntity>().getPage(params),
-                new QueryWrapper<AttrEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<AttrEntity> page = this.page(
+      new Query<AttrEntity>().getPage(params),
+      new QueryWrapper<AttrEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

@@ -14,16 +14,17 @@ import com.zbin.gulimall.coupon.service.SpuBoundsService;
 
 
 @Service("spuBoundsService")
-public class SpuBoundsServiceImpl extends ServiceImpl<SpuBoundsDao, SpuBoundsEntity> implements SpuBoundsService {
+public class SpuBoundsServiceImpl extends ServiceImpl<SpuBoundsDao, SpuBoundsEntity> implements
+  SpuBoundsService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<SpuBoundsEntity> page = this.page(
-                new Query<SpuBoundsEntity>().getPage(params),
-                new QueryWrapper<SpuBoundsEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<SpuBoundsEntity> page = this.page(
+      new Query<SpuBoundsEntity>().getPage(params),
+      new QueryWrapper<SpuBoundsEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

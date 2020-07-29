@@ -14,16 +14,17 @@ import com.zbin.gulimall.product.service.SpuInfoDescService;
 
 
 @Service("spuInfoDescService")
-public class SpuInfoDescServiceImpl extends ServiceImpl<SpuInfoDescDao, SpuInfoDescEntity> implements SpuInfoDescService {
+public class SpuInfoDescServiceImpl extends
+  ServiceImpl<SpuInfoDescDao, SpuInfoDescEntity> implements SpuInfoDescService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<SpuInfoDescEntity> page = this.page(
-                new Query<SpuInfoDescEntity>().getPage(params),
-                new QueryWrapper<SpuInfoDescEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<SpuInfoDescEntity> page = this.page(
+      new Query<SpuInfoDescEntity>().getPage(params),
+      new QueryWrapper<SpuInfoDescEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

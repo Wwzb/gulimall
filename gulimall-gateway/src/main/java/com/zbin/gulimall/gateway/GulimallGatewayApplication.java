@@ -9,8 +9,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class GulimallGatewayApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(GulimallGatewayApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(GulimallGatewayApplication.class, args);
+  }
 
 }

@@ -14,16 +14,18 @@ import com.zbin.gulimall.member.service.MemberCollectSubjectService;
 
 
 @Service("memberCollectSubjectService")
-public class MemberCollectSubjectServiceImpl extends ServiceImpl<MemberCollectSubjectDao, MemberCollectSubjectEntity> implements MemberCollectSubjectService {
+public class MemberCollectSubjectServiceImpl extends
+  ServiceImpl<MemberCollectSubjectDao, MemberCollectSubjectEntity> implements
+  MemberCollectSubjectService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<MemberCollectSubjectEntity> page = this.page(
-                new Query<MemberCollectSubjectEntity>().getPage(params),
-                new QueryWrapper<MemberCollectSubjectEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<MemberCollectSubjectEntity> page = this.page(
+      new Query<MemberCollectSubjectEntity>().getPage(params),
+      new QueryWrapper<MemberCollectSubjectEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

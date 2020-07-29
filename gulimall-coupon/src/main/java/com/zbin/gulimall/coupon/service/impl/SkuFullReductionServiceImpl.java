@@ -14,16 +14,17 @@ import com.zbin.gulimall.coupon.service.SkuFullReductionService;
 
 
 @Service("skuFullReductionService")
-public class SkuFullReductionServiceImpl extends ServiceImpl<SkuFullReductionDao, SkuFullReductionEntity> implements SkuFullReductionService {
+public class SkuFullReductionServiceImpl extends
+  ServiceImpl<SkuFullReductionDao, SkuFullReductionEntity> implements SkuFullReductionService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<SkuFullReductionEntity> page = this.page(
-                new Query<SkuFullReductionEntity>().getPage(params),
-                new QueryWrapper<SkuFullReductionEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<SkuFullReductionEntity> page = this.page(
+      new Query<SkuFullReductionEntity>().getPage(params),
+      new QueryWrapper<SkuFullReductionEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

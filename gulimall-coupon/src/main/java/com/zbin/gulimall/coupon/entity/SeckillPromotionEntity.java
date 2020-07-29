@@ -9,7 +9,7 @@ import lombok.Data;
 
 /**
  * 秒杀活动
- * 
+ *
  * @author Zbin
  * @email 996627951@qq.com
  * @date 2020-07-05 21:13:06
@@ -17,36 +17,37 @@ import lombok.Data;
 @Data
 @TableName("sms_seckill_promotion")
 public class SeckillPromotionEntity implements Serializable {
-	private static final long serialVersionUID = 1L;
 
-	/**
-	 * id
-	 */
-	@TableId
-	private Long id;
-	/**
-	 * 活动标题
-	 */
-	private String title;
-	/**
-	 * 开始日期
-	 */
-	private Date startTime;
-	/**
-	 * 结束日期
-	 */
-	private Date endTime;
-	/**
-	 * 上下线状态
-	 */
-	private Integer status;
-	/**
-	 * 创建时间
-	 */
-	private Date createTime;
-	/**
-	 * 创建人
-	 */
-	private Long userId;
+  private static final long serialVersionUID = 1L;
+
+  /**
+   * id
+   */
+  @TableId
+  private Long id;
+  /**
+   * 活动标题
+   */
+  private String title;
+  /**
+   * 开始日期
+   */
+  private Date startTime;
+  /**
+   * 结束日期
+   */
+  private Date endTime;
+  /**
+   * 上下线状态
+   */
+  private Integer status;
+  /**
+   * 创建时间
+   */
+  private Date createTime;
+  /**
+   * 创建人
+   */
+  private Long userId;
 
 }

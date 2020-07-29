@@ -15,6 +15,6 @@ import java.util.Map;
  */
 public interface SkuInfoService extends IService<SkuInfoEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
+  PageUtils queryPage(Map<String, Object> params);
 }
 

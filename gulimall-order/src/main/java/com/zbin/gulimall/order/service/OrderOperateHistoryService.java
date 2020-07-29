@@ -15,6 +15,6 @@ import java.util.Map;
  */
 public interface OrderOperateHistoryService extends IService<OrderOperateHistoryEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
+  PageUtils queryPage(Map<String, Object> params);
 }
 

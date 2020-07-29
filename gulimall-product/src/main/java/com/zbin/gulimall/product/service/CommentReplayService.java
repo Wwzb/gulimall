@@ -15,6 +15,6 @@ import java.util.Map;
  */
 public interface CommentReplayService extends IService<CommentReplayEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
+  PageUtils queryPage(Map<String, Object> params);
 }
 

@@ -14,16 +14,17 @@ import com.zbin.gulimall.ware.service.WareInfoService;
 
 
 @Service("wareInfoService")
-public class WareInfoServiceImpl extends ServiceImpl<WareInfoDao, WareInfoEntity> implements WareInfoService {
+public class WareInfoServiceImpl extends ServiceImpl<WareInfoDao, WareInfoEntity> implements
+  WareInfoService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<WareInfoEntity> page = this.page(
-                new Query<WareInfoEntity>().getPage(params),
-                new QueryWrapper<WareInfoEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<WareInfoEntity> page = this.page(
+      new Query<WareInfoEntity>().getPage(params),
+      new QueryWrapper<WareInfoEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

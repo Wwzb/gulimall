@@ -14,16 +14,17 @@ import com.zbin.gulimall.ware.service.WareOrderTaskService;
 
 
 @Service("wareOrderTaskService")
-public class WareOrderTaskServiceImpl extends ServiceImpl<WareOrderTaskDao, WareOrderTaskEntity> implements WareOrderTaskService {
+public class WareOrderTaskServiceImpl extends
+  ServiceImpl<WareOrderTaskDao, WareOrderTaskEntity> implements WareOrderTaskService {
 
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<WareOrderTaskEntity> page = this.page(
-                new Query<WareOrderTaskEntity>().getPage(params),
-                new QueryWrapper<WareOrderTaskEntity>()
-        );
+  @Override
+  public PageUtils queryPage(Map<String, Object> params) {
+    IPage<WareOrderTaskEntity> page = this.page(
+      new Query<WareOrderTaskEntity>().getPage(params),
+      new QueryWrapper<WareOrderTaskEntity>()
+    );
 
-        return new PageUtils(page);
-    }
+    return new PageUtils(page);
+  }
 
 }

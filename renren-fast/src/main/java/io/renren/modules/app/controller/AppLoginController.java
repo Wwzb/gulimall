@@ -34,31 +34,32 @@ import java.util.Map;
 @RequestMapping("/app")
 @Api("APP登录接口")
 public class AppLoginController {
-    @Autowired
-    private UserService userService;
-    @Autowired
-    private JwtUtils jwtUtils;
 
-    /**
-     * 登录
-     */
-    @PostMapping("login")
-    @ApiOperation("登录")
-    public R login(@RequestBody LoginForm form){
-        //表单校验
-        ValidatorUtils.validateEntity(form);
+  @Autowired
+  private UserService userService;
+  @Autowired
+  private JwtUtils jwtUtils;
 
-        //用户登录
-        long userId = userService.login(form);
+  /**
+   * 登录
+   */
+  @PostMapping("login")
+  @ApiOperation("登录")
+  public R login(@RequestBody LoginForm form) {
+    //表单校验
+    ValidatorUtils.validateEntity(form);
 
-        //生成token
-        String token = jwtUtils.generateToken(userId);
+    //用户登录
+    long userId = userService.login(form);
 
-        Map<String, Object> map = new HashMap<>();
-        map.put("token", token);
-        map.put("expire", jwtUtils.getExpire());
+    //生成token
+    String token = jwtUtils.generateToken(userId);
 
-        return R.ok(map);
-    }
+    Map<String, Object> map = new HashMap<>();
+    map.put("token", token);
+    map.put("expire", jwtUtils.getExpire());
+
+    return R.ok(map);
+  }
 
 }
